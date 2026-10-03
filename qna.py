@@ -11,7 +11,7 @@ def answer_question(question: str):
 
     client = genai.Client(api_key=key)
     response = client.models.generate_content(
-        model=os.getenv("GEMINI_MODEL", "gemini-3.8-flash"),
+        model=os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite"),
         contents=f"""You are EduGenie, a student-friendly educational assistant.
 Answer this academic question accurately and concisely.
 Use simple language and give an example when useful.
