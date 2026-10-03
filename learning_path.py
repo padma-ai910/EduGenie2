@@ -8,7 +8,7 @@ def get_learning_recommendations(topic: str, level: str = "standard"):
 
     client = genai.Client(api_key=key)
     response = client.models.generate_content(
-        model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+        model=os.getenv("GEMINI_MODEL", "gemini-3.8-flash"),
         contents=f"""Create a personalized learning path for {topic}.
 Learner level: {level}.
 Organize it from beginner to advanced.

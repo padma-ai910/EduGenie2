@@ -8,7 +8,7 @@ def summarize_text(text: str):
 
     client = genai.Client(api_key=key)
     response = client.models.generate_content(
-        model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+        model=os.getenv("GEMINI_MODEL", "gemini-3.8-flash"),
         contents=f"""Summarize the following educational passage for quick revision.
 Keep important facts, definitions, and relationships.
 Use concise bullet points.

@@ -25,7 +25,7 @@ Passage:
 {passage}"""
 
     response = client.models.generate_content(
-        model=os.getenv("GEMINI_MODEL", "gemini-2.5-flash"),
+        model=os.getenv("GEMINI_MODEL", "gemini-3.8-flash"),
         contents=prompt
     )
     cleaned = response.text.replace("```json", "").replace("```", "").strip()
