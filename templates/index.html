@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie | AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+<div class="cursor-glow"></div>
+
+<header>
+    <a class="logo" href="/">
+        <span>✦</span>
+        Edu<span>Genie</span>
+    </a>
+
+    <div class="header-right">
+
+        <div class="online">
+            <i></i>
+            Gemini-powered
+        </div>
+
+        <button id="theme" class="theme-btn">☾</button>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="badge">
+            AI LEARNING ASSISTANT
+        </div>
+
+        <h1>
+            Learn smarter.
+            <br>
+            <em>Not harder.</em>
+        </h1>
+
+        <p>
+            Ask questions, simplify complex concepts, summarize your notes,
+            test yourself, and build a personalized learning path with EduGenie.
+        </p>
+
+    </section>
+
+
+    <!-- APPLICATION -->
+
+    <section class="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="menu">
+
+            <p class="menu-title">
+                LEARNING TOOLS
+            </p>
+
+            <button class="tool active" data-task="qa">
+
+                <span>⌕</span>
+
+                <div>
+                    <b>Ask Anything</b>
+                    <small>Smart answers</small>
+                </div>
+
+            </button>
+
+
+            <button class="tool" data-task="explain">
+
+                <span>✦</span>
+
+                <div>
+                    <b>Explain It</b>
+                    <small>Simplify concepts</small>
+                </div>
+
+            </button>
+
+
+            <button class="tool" data-task="quiz">
+
+                <span>☑</span>
+
+                <div>
+                    <b>Generate Quiz</b>
+                    <small>Test your knowledge</small>
+                </div>
+
+            </button>
+
+
+            <button class="tool" data-task="summarize">
+
+                <span>≡</span>
+
+                <div>
+                    <b>Summarize</b>
+                    <small>Quick revision notes</small>
+                </div>
+
+            </button>
+
+
+            <button class="tool" data-task="learn">
+
+                <span>↗</span>
+
+                <div>
+                    <b>Learning Path</b>
+                    <small>Beginner → Advanced</small>
+                </div>
+
+            </button>
+
+        </aside>
+
+
+        <!-- WORKSPACE -->
+
+        <section class="workspace">
+
+            <div class="topline">
+
+                <div>
+
+                    <label id="kicker">
+                        ASK ANYTHING
+                    </label>
+
+                    <h2 id="title">
+                        What would you like to learn?
+                    </h2>
+
+                </div>
+
+
+                <select id="level">
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="standard" selected>
+                        Standard
+                    </option>
+
+                    <option value="exam">
+                        Exam Prep
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <textarea
+                id="input"
+                placeholder="Ask a question or enter a topic..."
+            ></textarea>
+
+
+            <div class="chips">
+
+                <span>Try:</span>
+
+                <button data-fill="Explain the OSI model with a simple example">
+                    OSI Model
+                </button>
+
+                <button data-fill="What is artificial intelligence?">
+                    Artificial Intelligence
+                </button>
+
+                <button data-fill="Create a learning path for SQL">
+                    SQL Roadmap
+                </button>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <button id="clear" class="clear">
+                    Clear
+                </button>
+
+                <button id="run" class="run">
+                    Ask EduGenie
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <div id="loading" class="loading hidden">
+                <span class="loading-star">✦</span>
+                EduGenie is thinking...
+            </div>
+
+
+            <div id="result" class="result hidden"></div>
+
+        </section>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <span>
+        EduGenie • TN Skills Project
+    </span>
+
+    <span>
+        FastAPI + Google Gemini
+    </span>
+
+</footer>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
